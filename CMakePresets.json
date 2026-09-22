@@ -1,0 +1,42 @@
+{
+  "version": 8,
+  "configurePresets": [
+    {
+      "name": "nxdk-base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/nxdk/share/toolchain-nxdk.cmake"
+      }
+    },
+    {
+      "name": "debug",
+      "displayName": "nxdk Debug",
+      "description": "Configure a Debug build for the original Xbox using nxdk.",
+      "inherits": "nxdk-base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "nxdk Release",
+      "description": "Configure an optimized Release build for the original Xbox using nxdk.",
+      "inherits": "nxdk-base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "configurePreset": "debug",
+      "name": "debug"
+    },
+    {
+      "configurePreset": "release",
+      "name": "release"
+    }
+  ]
+}

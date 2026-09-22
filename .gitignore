@@ -1,0 +1,13 @@
+# VS code folder
+.vscode
+
+# build folder
+build/**
+
+# various compiled file patterns
+*.exe
+*.exe.manifest
+*.obj
+*.o
+*.xbe
+*.inl
