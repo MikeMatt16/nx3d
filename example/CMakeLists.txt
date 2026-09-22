@@ -1,3 +1,4 @@
+set(NX3D_SAMPLE "nx3d-example")
 set(XBE_TITLE ${NX3D_SAMPLE})
 
 # add_subdirectory(shaders)

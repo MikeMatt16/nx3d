@@ -1,3 +1,4 @@
+set(NX3D_LIB "nx3d")
 add_library(${NX3D_LIB} STATIC)
 
 find_package(NXDK REQUIRED)
